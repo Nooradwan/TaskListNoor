@@ -25,5 +25,12 @@ class TaskController extends Controller
         ]);
         return redirect()->back();
     }
+
+    public function destroy($id)
+    {
+        DB::table('tasks')->where('id','=',$id )->delete();
+        return redirect()->back();
+
+    }
 }
 

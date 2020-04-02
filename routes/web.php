@@ -20,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TaskController@index');
 
 Route::post('store','TaskController@store');
+
+Route::delete('delete/{id}','TaskController@destroy');
